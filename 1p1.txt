@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+:CCLS\nuser1:
+:CCLS\nuser2:
+:CCLS\nuser3:
+:CCLS\nuser:
+:CCLS\nuser1: --|> :CCLS\nuser:
+:CCLS\nuser2: --|> :CCLS\nuser:
+:CCLS\nuser3: --|> :CCLS\nuser:
+rectangle "CCLS-multiple stations"{
+:CCLS\nuser: -- (Sync all\nuset data)
+:CCLS\nuser: -- (Detect missing\nfeatures)
+:CCLS\nuser: -- (Acquire missing\nobservations)
+}
+
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+actor User
+actor Operator
+actor Camera
+actor :Threat Ev aluation System:
+User-->(Initiate System)
+Operator-->(Initiate System)
+User<|-- Operator
+(Initiate System) <. (Login): depend
+Operator-->(Login)
+(Process Camera\nImage)<-- Camera
+(Initiate System) <.. (Process Camera\nImage) : depend
+(Process Camera\nImage) .> (Ev aluate Threat) : include
+(Ev aluate Threat) --> :Threat Ev aluation System:
+(Ev aluate Threat) <. (Distribute Threats\nInformation): extend
+
+@enduml

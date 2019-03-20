@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+actor admin
+actor user
+rectangle {
+admin -->(Verification)
+admin -->(Clear\nstudents)
+(Create\naccount)<---user
+(Registration)<---user
+admin ---->(View admission\nstatus)
+admin -->(Print\nadmission)
+admin -->(Approval)
+(View admission\nstatus)<--user
+(Print\nadmission)<--user
+}
+
+
+@enduml
